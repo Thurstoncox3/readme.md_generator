@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkDown = require(`./generateMarkDown`);
 
-
-
 inquirer
     .prompt([
         {
@@ -44,7 +42,7 @@ inquirer
         {
             type: 'checkbox',
             message: 'Who is the project licensed by?',
-            choices: ['The MIT License','Boost Software Licensce 1.0','Apachi 2.0 License'],
+            choices: ['The MIT License', 'Boost Software Licensce 1.0', 'Apachi 2.0 License'],
             name: "license"
         },
         {
@@ -62,17 +60,20 @@ inquirer
             message: 'Any test you would like to add in the future?',
             name: "test"
         },
-        
-    ]);
-    function writeToFile(){
-        inquirer
-            .prompt(questions)
-            .then((data) => {
-                fs.writeFile('README.md', generateMarkDown(data), (err) =>
-                err ? console.log(err) : console.log ('All Done!')
-            );
-    },
+    ])
 
-    writeToFile()
-    
-)}
+
+function writeToFile() {
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+            fs.writeFile('README.md', generateMarkDown(data), (err) =>
+                err ? console.log(err) : console.log('All Done!')
+            );
+        }),
+        writeToFile()
+
+}
+
+
+
