@@ -1,6 +1,6 @@
 const inquirer = require("inquirer")
 
-function renderLicense(){
+function renderLicense(license) {
     inquirer.prompt([
     {   type: 'checkbox',
         message: 'Who is the project licensed by?',
@@ -22,9 +22,43 @@ function renderLicense(){
             default:
                 return [];
                 break;
+    }}, 
+    function renderLicense(license) {
+        return`${renderLicense(license)}${renderLicense(license)}`
+    },
+
+    function generateMarkDown(data){
+        return `#${data.title}
+
+        ##Table of Contents
+         * description
+         * usage
+         * license
+         * installation
+         * contributors
+         * test
+         
+        ## Description
+            ${data.description}
+        ## Usage
+        ${data.usage}
+
+        ## License
+        ${data.license}
+
+        ## Installation
+        ${data.installation}
+
+        ## Contributors
+        ${data.contributors}
+
+        ## Test
+        ${data.test}
         
-
+        ## Questions
+        ${data.name}:
+        ${data.email}:
+        ${data.github}:`
     }
-})
-
-}
+)}
+module.exports = generateMarkDown;
