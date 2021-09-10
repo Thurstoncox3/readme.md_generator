@@ -63,7 +63,7 @@ inquirer
     ])
 
 
-function writeToFile() {
+ const writeToFile = () => {
     inquirer
         .prompt(questions)
         .then((data) => {
@@ -71,7 +71,7 @@ function writeToFile() {
                 err ? console.log(err) : console.log('All Done!')
             );
         }),
-        writeToFile()
+        writeToFile('README.md')
 
 }
 
