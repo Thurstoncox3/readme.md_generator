@@ -1,7 +1,7 @@
 # readme.md_generator
 README.md Generator
-##### Link to Github:
-##### Link to Repo:
+##### Link to Github: https://github.com/Thurstoncox3/readme.md_generator
+##### Link to Repo: https://thurstoncox3.github.io/readme.md_generator/
 ##### Link to Video Tutorial: https://drive.google.com/file/d/14x_pGUkfqhLKJ6qcRCwcjZfHhZzzmgMb/view?usp=sharing
 
 ## Table of Contents
