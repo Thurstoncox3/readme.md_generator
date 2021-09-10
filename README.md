@@ -1,5 +1,9 @@
 # readme.md_generator
 README.md Generator
+##### Link to Github:
+##### Link to Repo:
+##### Link to Video Tutorial: https://drive.google.com/file/d/14x_pGUkfqhLKJ6qcRCwcjZfHhZzzmgMb/view?usp=sharing
+
 ## Table of Contents
  - Description
  - Usage
